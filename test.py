@@ -17,8 +17,7 @@ testloader = torch.utils.data.DataLoader(
     testset, batch_size=opt.TEST_BATCH_SIZE)
 
 print('Loading model')
-net = FC(opt)
-net = torch.load(opt.MODEL_FILE)['net']
+net = torch.load(opt.MODEL_FILE)
 if opt.USE_CUDA:
     net.cuda()
     net = torch.nn.DataParallel(
