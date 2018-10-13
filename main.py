@@ -27,7 +27,7 @@ net = FC(opt)
 if opt.USE_CUDA:
     print('cuda')
     net = torch.nn.DataParallel(
-        net, device_ids=range(torch.cuda.device_count()))
+        net, device_ids=range(torch.cuda.device_count())).cuda()
     cudnn.benchmark = True
 
 criterion = torch.nn.CrossEntropyLoss()
