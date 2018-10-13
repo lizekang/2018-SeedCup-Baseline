@@ -78,8 +78,7 @@ def val(epoch):
     f1 = 0.1*f1_1+0.3*f1_2+0.6*f1_3
     print("val epoch %d finished" % epoch)
     print("Save model...")
-    state = {"net": net.module if opt.USE_CUDA else net}
-    torch.save(state, "model.t7")
+    torch.save(net, "model.t7")
     print("Save model successfully!")
     print("final loss:%.10f" % loss)
     print("f1 for class1:", f1_1)
