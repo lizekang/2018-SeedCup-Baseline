@@ -23,5 +23,5 @@
 生成模型之后，用`python3 test.py`即可生成对应的提交文件
 ### 本次baseline的编写环境
 python:3.6.6
-
+cuda:9.0.176
 torch 0.4.1
